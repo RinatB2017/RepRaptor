@@ -176,14 +176,17 @@ MainWindow::MainWindow(QWidget *parent) :
     updateRecent();
 
     //Update icon
-    if(trayIconEnabled) trayIcon->show();
-    else trayIcon->hide();
+    if(trayIconEnabled)
+        trayIcon->show();
+    else
+        trayIcon->hide();
 }
 
 MainWindow::~MainWindow()
 {
     //Save settings
-    if(firstrun) settings.setValue("core/firstrun", true); //firstrun is inverted!
+    if(firstrun)
+        settings.setValue("core/firstrun", true); //firstrun is inverted!
     settings.setValue("printer/baudrateindex", ui->baudbox->currentIndex());
     settings.setValue("core/checktemperature", ui->checktemp->isChecked());
     settings.setValue("user/extrudertemp", ui->etmpspin->value());

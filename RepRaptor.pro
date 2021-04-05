@@ -67,8 +67,8 @@ unix {
     isEmpty(PREFIX) {
         PREFIX = /usr
     }
-    BINDIR = $$PREFIX/bin
-    DATADIR =$$PREFIX/share
+    BINDIR  = $$PREFIX/bin
+    DATADIR = $PREFIX/share
 
     DEFINES += DATADIR=\\\"$$DATADIR\\\" PKGDATADIR=\\\"$$PKGDATADIR\\\"
 
@@ -84,6 +84,8 @@ unix {
     icon.path = $$DATADIR/icons
     icon.files += icons/repraptor.png
 }
+
+DESTDIR = bin
 
 SOURCES += \
     main.cpp \

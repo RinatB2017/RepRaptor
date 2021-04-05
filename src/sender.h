@@ -21,8 +21,8 @@ public:
     ~Sender();
 
 protected:
-    QSerialPort *printer;
-    QTimer *sendTimer;
+    QSerialPort *printer = nullptr;
+    QTimer *sendTimer = nullptr;
     long int currentLine;
     long int totalLineNum;
     long int resendNum;

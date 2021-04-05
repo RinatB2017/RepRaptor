@@ -3,9 +3,9 @@
 Sender::Sender(QObject *parent) : QObject(parent)
 {
     //Initial values
-    currentLine=0;
-    totalLineNum=0;
-    baudrate=115200;
+    currentLine = 0;
+    totalLineNum = 0;
+    baudrate = 115200;
     resendNum = 0;
     resending = false;
     sendingChecksum=false;
@@ -207,10 +207,12 @@ void Sender::receivedData()
     if(printer->canReadLine())
     {
         QByteArray data = printer->readLine();
-        if(data == "") return;
+        if(data == "")
+            return;
         emit dataReceived(data);
-        //Yeah, yeah, I know. This class is called "Sender", but checking this here is faster.
-        if(data.startsWith("ok") || data.startsWith("wait")) readyReceive=true;
+        // Yeah, yeah, I know. This class is called "Sender", but checking this here is faster.
+        if(data.startsWith("ok") || data.startsWith("wait"))
+            readyReceive=true;
     }
 }
 
