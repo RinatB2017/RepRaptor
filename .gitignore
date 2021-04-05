@@ -1,8 +1,4 @@
-RepRaptor
-Makefile
 *.user
-*.o
-ui_*.h
-moc_*
-qrc_*
-*~
+Makefile
+object_script.*
+.qmake.stash

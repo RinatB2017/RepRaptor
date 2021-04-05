@@ -14,7 +14,7 @@
    <string>Settings</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="graphics.qrc">
+   <iconset>
     <normaloff>:/icons/settings.png</normaloff>:/icons/settings.png</iconset>
   </property>
   <layout class="QGridLayout" name="gridLayout_3">
@@ -348,9 +348,7 @@ feedrate</string>
    </item>
   </layout>
  </widget>
- <resources>
-  <include location="graphics.qrc"/>
- </resources>
+ <resources/>
  <connections>
   <connection>
    <sender>buttonBox</sender>

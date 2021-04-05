@@ -20,7 +20,7 @@
    <string>Print from SD</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="graphics.qrc">
+   <iconset>
     <normaloff>:/icons/sd.png</normaloff>:/icons/sd.png</iconset>
   </property>
   <layout class="QGridLayout" name="gridLayout">
@@ -59,9 +59,7 @@
    </item>
   </layout>
  </widget>
- <resources>
-  <include location="graphics.qrc"/>
- </resources>
+ <resources/>
  <connections>
   <connection>
    <sender>buttonBox</sender>
