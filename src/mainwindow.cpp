@@ -1043,13 +1043,21 @@ void MainWindow::closeEvent(QCloseEvent *event)
 
         //Process responce
         if(dialog.clickedButton() == exitButton)
+        {
+            trayIcon->hide();
             event->accept();
+        }
         else
+        {
             event->ignore();
+        }
     }
     // Close immediately if not connected
     else
+    {
+        trayIcon->hide();
         event->accept();
+    }
 }
 
 void MainWindow::trayIconClicked(QSystemTrayIcon::ActivationReason reason)
